@@ -1,0 +1,36 @@
+{
+  "name": "the1068",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@nuxtjs/color-mode": "^3.4.1",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@radix-icons/vue": "^1.0.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "nuxt": "^3.12.1",
+    "nuxt-icon": "^0.6.10",
+    "radix-vue": "^1.8.3",
+    "shadcn-nuxt": "^0.10.4",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "^3.4.28",
+    "vue-router": "^4.3.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.21.1",
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/nuxt": "^10.11.0",
+    "eslint": "9.4.0",
+    "eslint-plugin-format": "^0.1.1",
+    "typescript": "^5.4.5"
+  }
+}
