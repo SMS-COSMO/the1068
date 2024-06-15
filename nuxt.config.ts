@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-icon',
   ],
+  routeRules: {
+    '/guide': { redirect: 'https://guide.the1068.pictures/' },
+  },
   shadcn: {
     /**
      * Prefix for all the imported component

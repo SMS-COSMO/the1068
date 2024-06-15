@@ -2,21 +2,21 @@
   <!-- Preload fonts -->
   <span v-for="f in boskaFamily" :key="f" :style="`font-family: ${f}`" />
   <div
-    class="-z-10 -top-[400px] -right-[300px] h-[1000px] w-[1000px] fixed blur-[400px] rounded-full opacity-20 transition-all duration-500"
+    class="-z-10 -bottom-[600px] md:-top-[400px] -right-[300px] h-[1000px] w-[1000px] fixed blur-[400px] rounded-full opacity-20 transition-all duration-500"
     :style="selected === 'fm'
       ? 'background-color: #1185D6'
       : 'background-color: #EB5228'"
   />
-  <div class="h-screen w-screen md:flex gap-20 pt-20 md:pt-0 px-8 md:px-10 lg:px-24">
-    <div class="self-center flex basis-3/5 md:mt-10 justify-center md:justify-end select-none leading-tight">
-      <div class="transition-all duration-500 text-6xl md:text-[8vw] h-fit">
+  <div class="h-svh w-sh-svh flex flex-col md:flex-row gap-20 pt-16 pb-8 md:py-0 px-8 md:px-10 lg:px-24">
+    <div class="text-center self-center md:flex md:basis-3/5 md:mt-10 justify-center md:justify-end select-none leading-tight">
+      <div class="transition-all duration-500 text-7xl mb-2 md:mb-0 md:text-[8vw] h-fit">
         <span :style="`font-family: ${font1}`">the</span>
         <span :style="`font-family: ${font2}`">1068.</span>
       </div>
       <div>
         <div
-          class="transition-all duration-500 cursor-pointer"
-          :style="selected === 'guide' && `transform: translateY(-${guideHeight}px)`"
+          class="flex gap-6 justify-center md:block transition-all duration-500 cursor-pointer"
+          :style="breakpoints.isGreaterOrEqual('lg') && selected === 'guide' && `transform: translateY(-${guideHeight}px)`"
         >
           <div
             class="clash-bold fm-gradient w-fit text-6xl md:text-[8vw] transition-all duration-500"
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div class="shadow-white self-center basis-2/5 mt-16 md:mt-0">
+    <div class="shadow-white self-center md:basis-2/5 my-auto md:my-0">
       <Transition name="slide-up" mode="out-in">
         <div v-if="selected === 'fm'" style="text-shadow: 0 0 4em #FFFFFF50" class="text-center md:text-start">
           <h1 class="scroll-m-20 text-4xl md:text-5xl font-extrabold tracking-tight">
@@ -84,23 +84,27 @@
         </div>
       </Transition>
     </div>
+    <footer class="md:fixed md:bottom-4 md:left-0 md:w-screen flex flex-col md:flex-row md:opacity-0 md:hover:opacity-50 md:pt-40 px-10 transition-all duration-500">
+      <span class="self-center" style="font-family: Boska-Regular;">
+        the1068.pictures
+      </span>
+      <span class="md:ml-auto self-center" style="font-family: Boska-Bold;">
+        Designed By COSMO.
+      </span>
+      <NuxtLink class="md:ml-auto self-center" to="https://github.com/SMS-COSMO/the1068">
+        <Button size="icon" variant="ghost">
+          <Icon name="lucide:github" size="16" />
+        </Button>
+      </NuxtLink>
+    </footer>
   </div>
-  <footer class="fixed bottom-4 w-screen flex flex-col md:flex-row md:opacity-0 md:hover:opacity-50 pt-40 px-10 transition-all duration-500">
-    <span class="self-center" style="font-family: Boska-Regular;">
-      the1068.pictures
-    </span>
-    <span class="md:ml-auto self-center" style="font-family: Boska-Bold;">
-      Designed By COSMO.
-    </span>
-    <NuxtLink class="md:ml-auto self-center" to="https://github.com/SMS-COSMO/the1068">
-      <Button size="icon" variant="ghost">
-        <Icon name="lucide:github" size="16" />
-      </Button>
-    </NuxtLink>
-  </footer>
 </template>
 
 <script setup lang="ts">
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
+
+const breakpoints = useBreakpoints(breakpointsTailwind);
+
 definePageMeta({
   colorMode: 'dark',
 });
