@@ -12,6 +12,6 @@ useSeoMeta({
   description: '深中影像集 特别企划',
   ogDescription: '深中影像集 特别企划',
   ogImage: '/ogImage.png',
-  themeColor: '#27272A',
+  themeColor: '#09090b',
 });
 </script>
