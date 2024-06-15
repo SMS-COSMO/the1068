@@ -16,7 +16,7 @@
       <div>
         <div
           class="flex gap-6 justify-center md:block transition-all duration-500 cursor-pointer"
-          :style="breakpoints.isGreaterOrEqual('lg') && selected === 'guide' && `transform: translateY(-${guideHeight}px)`"
+          :style="breakpoints.isGreaterOrEqual('md') && selected === 'guide' && `transform: translateY(-${guideHeight}px)`"
         >
           <div
             class="clash-bold fm-gradient w-fit text-6xl md:text-[8vw] transition-all duration-500"
