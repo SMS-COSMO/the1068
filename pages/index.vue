@@ -66,7 +66,7 @@
             深中漫游指南
           </h1>
           <p class="leading-relaxed md:text-xl [&:not(:first-child)]:mt-6">
-            一份 不太常规的 深中漫游指南。
+            一份 不太常规的 深中入学指南。
           </p>
           <div class="mt-8 flex gap-4 justify-center md:justify-start">
             <NuxtLink to="https://guide.the1068.pictures/">
